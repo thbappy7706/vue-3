@@ -3,7 +3,9 @@
     <h1> {{greeting}} {{name}}</h1>
        <h3 v-text="profession" ></h3>
        <h3 v-html="profession" ></h3>
-    <div v-html="link"></div>
+        <div v-html="link"></div>
+      <h2 v-bind:id="headingId">Heading</h2>
+      <button v-bind:disabled="disable">Click me</button>
 
   </div>
 
@@ -18,7 +20,9 @@ export default  {
       greeting: 'Hello!!',
       name: "Tanvir Hossen Bappy",
       profession: `<b>Software Engineer</b>`,
-      link : `<a href="#" onclick="alert('Hello!!!')">Please click</a>`
+      link : `<a href="#" onclick="alert('Hello!!!')">Please click</a>`,
+      headingId : '101',
+      disable :true,
     }
   }
 
