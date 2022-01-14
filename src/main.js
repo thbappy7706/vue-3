@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+// import App from './App.vue'
+import Bappy from './components/Bappy'
 
-createApp(App).mount('#app')
+createApp(Bappy).mount('#app')
