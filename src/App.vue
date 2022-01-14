@@ -24,7 +24,8 @@
     <!--    Style Binding object as array-->
     <h2 v-bind:style="[baseStyleObject,successStyleObject]">Success Buddy</h2>
 
-    <h2 v-bind:style="[baseStyleObject,dangerStyleObject]">Danger Buddy</h2>
+<!--    shorthand Binding-->
+    <h2 :style="[baseStyleObject,dangerStyleObject]">Danger Buddy</h2>
   </div>
 
 </template>
