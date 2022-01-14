@@ -10,6 +10,21 @@
     <h3 class="textUnderline" v-bind:class="status">Status</h3>
  <h2 class="badge" v-bind:class="isSoldOutMovie ? 'badge-success' : 'badge-danger'">Movie SoldOut</h2>
 
+<!--    Style Binding INLINE-->
+    <h2 v-bind:style="{
+      color:highlightColor,
+      fontSize:sizeOfText+ `px`,
+      fontFamily:`Merienda`,
+    }">This is Inline Style</h2>
+
+
+    <!--    Style Binding object-->
+    <h2 v-bind:style="styleObject">This is Style as an object</h2>
+
+    <!--    Style Binding object as array-->
+    <h2 v-bind:style="[baseStyleObject,successStyleObject]">Success Buddy</h2>
+
+    <h2 v-bind:style="[baseStyleObject,dangerStyleObject]">Danger Buddy</h2>
   </div>
 
 </template>
@@ -27,7 +42,37 @@ export default  {
       headingId : '101',
       disable :true,
       status : `danger`,
-      isSoldOutMovie: false
+      isSoldOutMovie: false,
+      highlightColor: `orange`,
+      sizeOfText : 50,
+      styleObject :
+          {
+            color: `green`,
+            fontSize: `50px`,
+            padding: `1rem`,
+            fontWeight:`bold`
+          },
+      baseStyleObject :
+          {
+
+            padding: `10px`
+          },
+
+      successStyleObject :
+          {
+            color:`green`,
+            backgroundColor:`lightgreen`,
+            border:`1px solid green`,
+            borderRadius: `5rem`,
+          },
+
+    dangerStyleObject :
+          {
+            color:`red`,
+            backgroundColor:`skyblue`,
+            border:`1px solid red`,
+            borderRadius: `5rem`,
+          }
     }
   }
 
@@ -42,6 +87,7 @@ export default  {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
 .textUnderline
   {
