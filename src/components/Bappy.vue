@@ -1,5 +1,5 @@
+<!--Conditional Rendering-->
 <template>
-<div>
   <h2 v-if="number===0"> The Number is Zero</h2>
   <h2 v-else-if="number < 0"> The Number is Negative</h2>
   <h2 v-else-if="number > 0"> The Number is Positive</h2>
@@ -7,10 +7,10 @@
   <template v-if="display">
     <h3>Tanvir Hossen</h3>
     <h3>Vue Practice</h3>
+
   </template>
+  <h2 v-bind:style="{color:elementStyle}" v-show="elementShow">Hey!! V-show Rendered</h2>
 
-
-</div>
 </template>
 
 <script>
@@ -20,7 +20,9 @@ export default {
   {
   return{
    number: "Hello",
-    display:true
+    display:true,
+    elementShow:true,
+    elementStyle : `red`
   }
   },
 }
