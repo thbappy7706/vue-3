@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
+import Forms from "@/components/Forms";
 // import Methods from "@/components/Methods";
-import Events from "@/components/Events";
+// import Events from "@/components/Events";
 // import App from './App.vue'
 // import Bappy from './components/Bappy'
 // import App from "./App";
@@ -11,5 +12,6 @@ createApp(
     // Bappy,
     // ListRendering
     // Methods
-    Events
+    // Events
+    Forms
 ).mount('#app')
