@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
+import Watchers from "@/components/Watchers";
 // import Forms from "@/components/Forms";
-import Properties from "@/components/Properties";
+// import Properties from "@/components/Properties";
 // import Methods from "@/components/Methods";
 // import Events from "@/components/Events";
 // import App from './App.vue'
@@ -15,5 +16,6 @@ createApp(
     // Methods
     // Events
     // Forms
-    Properties
+    // Properties
+    Watchers
 ).mount('#app')
