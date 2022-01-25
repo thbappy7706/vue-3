@@ -2,63 +2,77 @@
 <!--<Greet userName= "Tanvir Hossen" :profession="profession"/>-->
 <!--<Greet userName = "Lokman Hossen"/>-->
 <!--<Greet userName = "Rahima Shapla"/>-->
-  <Article Title="Article Title" :Likes="50" :isPublished="true"/>
+<!--  <Article Title="Article Title" :Likes="50" :isPublished="true"/>-->
+<!--  <ComponentC/>-->
 
+  <button @click="popUp=true">Show Popup</button>
+<Popup v-show="popUp" @close="popUp=false"/>
 
 </template>
 
 <script>
 // import Greet from "@/components/Greet";
-import Article from "@/components/Article";
+// import Article from "@/components/Article";
+// import ComponentC from "@/components/ComponentC";
+import Popup from "@/components/Popup";
 export default  {
   name: 'App',
   components: {
+    Popup,
     // Greet
-    Article
+    // Article
+    // ComponentC
   },
   data()
   {
     return {
-      greeting: 'Hello!!',
-      name: "Tanvir Hossen Bappy",
-      profession: `Software Engineer`,
-      link : `<a href="#" onclick="alert('Hello!!!')">Please click</a>`,
-      headingId : '101',
-      disable :true,
-      status : `danger`,
-      isSoldOutMovie: false,
-      highlightColor: `orange`,
-      sizeOfText : 50,
-      styleObject :
-          {
-            color: `green`,
-            fontSize: `50px`,
-            padding: `1rem`,
-            fontWeight:`bold`
-          },
-      baseStyleObject :
-          {
+    //   showPopup: false,
+    //   greeting: 'Hello!!',
+    //   name: "Tanvir Hossen Bappy",
+    //   profession: `Software Engineer`,
+    //   link : `<a href="#" onclick="alert('Hello!!!')">Please click</a>`,
+    //   headingId : '101',
+    //   disable :true,
+    //   status : `danger`,
+    //   isSoldOutMovie: false,
+    //   highlightColor: `orange`,
+    //   sizeOfText : 50,
+    //   styleObject :
+    //       {
+    //         color: `green`,
+    //         fontSize: `50px`,
+    //         padding: `1rem`,
+    //         fontWeight:`bold`
+    //       },
+    //   baseStyleObject :
+    //       {
+    //
+    //         padding: `10px`
+    //       },
+    //
+    //   successStyleObject :
+    //       {
+    //         color:`green`,
+    //         backgroundColor:`lightgreen`,
+    //         border:`1px solid green`,
+    //         borderRadius: `5rem`,
+    //       },
+    //
+    // dangerStyleObject :
+    //       {
+    //         color:`red`,
+    //         backgroundColor:`skyblue`,
+    //         border:`1px solid red`,
+    //         borderRadius: `5rem`,
+    //       },
 
-            padding: `10px`
-          },
-
-      successStyleObject :
-          {
-            color:`green`,
-            backgroundColor:`lightgreen`,
-            border:`1px solid green`,
-            borderRadius: `5rem`,
-          },
-
-    dangerStyleObject :
-          {
-            color:`red`,
-            backgroundColor:`skyblue`,
-            border:`1px solid red`,
-            borderRadius: `5rem`,
-          }
+      popUp:false
     }
+  },
+  provide: {
+    userName:`TanvirBappy`,
   }
+
 
 }
 </script>
