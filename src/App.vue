@@ -1,15 +1,21 @@
 <template>
-<Greet userName= "Tanvir Hossen" :profession="profession"/>
-<Greet userName = "Lokman Hossen"/>
-<Greet userName = "Rahima Shapla"/>
+<!--<Greet userName= "Tanvir Hossen" :profession="profession"/>-->
+<!--<Greet userName = "Lokman Hossen"/>-->
+<!--<Greet userName = "Rahima Shapla"/>-->
+  <Article Title="Article Title" :Likes="50" :isPublished="true"/>
+
 
 </template>
 
 <script>
-import Greet from "@/components/Greet";
+// import Greet from "@/components/Greet";
+import Article from "@/components/Article";
 export default  {
   name: 'App',
-  components: {Greet},
+  components: {
+    // Greet
+    Article
+  },
   data()
   {
     return {
