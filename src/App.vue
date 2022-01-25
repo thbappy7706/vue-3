@@ -1,44 +1,21 @@
 <template>
-  <div>
-    <h1> {{greeting}} {{name}}</h1>
-       <h3 v-text="profession" ></h3>
-       <h3 v-html="profession" ></h3>
-        <div v-html="link"></div>
-      <h2 v-bind:id="headingId">Heading</h2>
-      <button v-bind:disabled="disable">Click me</button>
-    <h2 class="textUnderline">UnderLine Text</h2>
-    <h3 class="textUnderline" v-bind:class="status">Status</h3>
- <h2 class="badge" v-bind:class="isSoldOutMovie ? 'badge-success' : 'badge-danger'">Movie SoldOut</h2>
-
-<!--    Style Binding INLINE-->
-    <h2 v-bind:style="{
-      color:highlightColor,
-      fontSize:sizeOfText+ `px`,
-      fontFamily:`Merienda`,
-    }">This is Inline Style</h2>
-
-
-    <!--    Style Binding object-->
-    <h2 v-bind:style="styleObject">This is Style as an object</h2>
-
-    <!--    Style Binding object as array-->
-    <h2 v-bind:style="[baseStyleObject,successStyleObject]">Success Buddy</h2>
-
-<!--    shorthand Binding-->
-    <h2 :style="[baseStyleObject,dangerStyleObject]">Danger Buddy</h2>
-  </div>
+<Greet userName= "Tanvir Hossen" :profession="profession"/>
+<Greet userName = "Lokman Hossen"/>
+<Greet userName = "Rahima Shapla"/>
 
 </template>
 
 <script>
+import Greet from "@/components/Greet";
 export default  {
   name: 'App',
+  components: {Greet},
   data()
   {
     return {
       greeting: 'Hello!!',
       name: "Tanvir Hossen Bappy",
-      profession: `<b>Software Engineer</b>`,
+      profession: `Software Engineer`,
       link : `<a href="#" onclick="alert('Hello!!!')">Please click</a>`,
       headingId : '101',
       disable :true,
