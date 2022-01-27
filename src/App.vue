@@ -53,8 +53,10 @@
   </NameList>
   <hr/>
 
+  <h1>Hello World</h1>
+  <NameList>
 
-
+  </NameList>
 
 
 </template>
@@ -176,5 +178,9 @@ export default  {
 .badge-danger {
   color: #fff;
   background-color: darkred;
+}
+
+h1{
+  color: red;
 }
 </style>
