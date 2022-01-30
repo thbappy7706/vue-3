@@ -7,6 +7,8 @@
   <hr>
   <Parent/>
 
+  <TemplateRef/>
+
 
 </template>
 
@@ -14,10 +16,12 @@
 import PostList from "@/components/PostList";
 import CreatePost from "@/components/CreatePost";
 import Parent from "@/components/Parent";
+import TemplateRef from "@/components/TemplateRef";
 
 export default  {
   name: 'App',
   components:{
+    TemplateRef,
     Parent,
     CreatePost,
     PostList,
