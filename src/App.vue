@@ -32,32 +32,35 @@
 <!--  </Box>-->
 
 
-<NameList>
-  <template v-slot:default="slotProps">
-    {{slotProps.firstName}} {{slotProps.lastName}}
-  </template>
-</NameList>
-<hr/>
+<!--<NameList>-->
+<!--  <template v-slot:default="slotProps">-->
+<!--    {{slotProps.firstName}} {{slotProps.lastName}}-->
+<!--  </template>-->
+<!--</NameList>-->
+<!--<hr/>-->
 
-  <NameList>
-    <template v-slot:default="slotProps">
-      {{slotProps.lastName}} {{slotProps.firstName}}
-    </template>
-  </NameList>
-  <hr/>
+<!--  <NameList>-->
+<!--    <template v-slot:default="slotProps">-->
+<!--      {{slotProps.lastName}} {{slotProps.firstName}}-->
+<!--    </template>-->
+<!--  </NameList>-->
+<!--  <hr/>-->
 
-  <NameList>
-    <template v-slot:default="slotProps">
-     {{slotProps.firstName}}
-    </template>
-  </NameList>
-  <hr/>
+<!--  <NameList>-->
+<!--    <template v-slot:default="slotProps">-->
+<!--     {{slotProps.firstName}}-->
+<!--    </template>-->
+<!--  </NameList>-->
+<!--  <hr/>-->
 
-  <h1>Hello World</h1>
-  <NameList>
+<!--  <h1>Hello World</h1>-->
+<!--  <NameList>-->
 
-  </NameList>
+<!--  </NameList>-->
 
+  <teleport>
+   <Portal/>
+  </teleport>
 
 </template>
 
@@ -68,11 +71,13 @@
 // import Popup from "@/components/Popup";
 // import Card from "@/components/Card";
 // import Box from "@/components/Box";
-import NameList from "@/components/NameList";
+// import NameList from "@/components/NameList";
+import Portal from "@/components/Portal";
 export default  {
   name: 'App',
   components: {
-    NameList,
+    Portal
+    // NameList,
     // Box,
     // Card
     // Popup,
