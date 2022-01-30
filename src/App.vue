@@ -4,15 +4,21 @@
   <br/>
   <br/>
 <PostList/>
+  <hr>
+  <Parent/>
+
+
 </template>
 
 <script>
 import PostList from "@/components/PostList";
 import CreatePost from "@/components/CreatePost";
+import Parent from "@/components/Parent";
 
 export default  {
   name: 'App',
   components:{
+    Parent,
     CreatePost,
     PostList,
   },
