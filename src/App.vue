@@ -1,39 +1,10 @@
 <template>
- <h1>Hello</h1>
-  <Increment/>
-  <HoverIncrement/>
-
-<CreatePost/>
-  <br/>
-  <br/>
-<PostList/>
-  <hr>
-  <Parent/>
-
-  <TemplateRef/>
-
-
+<h1>Hello</h1>
 </template>
 
 <script>
-import PostList from "@/components/PostList";
-import CreatePost from "@/components/CreatePost";
-import Parent from "@/components/Parent";
-import TemplateRef from "@/components/TemplateRef";
-import Increment from "@/components/Increment";
-import HoverIncrement from "@/components/HoverIncrement";
-
 export default  {
   name: 'App',
-  components:{
-    TemplateRef,
-    Increment,
-    HoverIncrement,
-    Parent,
-    CreatePost,
-    PostList,
-  },
-
   data()
   {
     return {
