@@ -1,6 +1,9 @@
 <template>
-<h1>Posts</h1>
-  <div v-for="post in posts" :key="post.id">
+<h1>Posts</h1><hr/>
+  <input type="text" v-model="searchTerm" placeholder="Search title here">
+<!--  <div v-for="post in posts" :key="post.id">-->
+<!--  for search-->
+  <div v-for="post in filterSearch" :key="post.id">
     <h2>{{post.id}}: {{post.title}}</h2>
     <p>{{post.body}}</p>
 <!--    {{ $filters.timeFilter(info.time.data) }}-->
@@ -15,7 +18,17 @@ export default {
   data(){
     return{
       posts:[],
+      searchTerm: ''
     }
+  },
+
+ // for search
+  computed:{
+       filterSearch(){
+         return this.posts.filter(post=>{
+            return post.title.match(this.searchTerm)
+         })
+       }
   },
   methods:{
 
