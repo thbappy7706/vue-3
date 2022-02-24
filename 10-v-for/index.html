@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <li v-for="name in names" :key="name">{{name}}</li>
+    </ol>
+
+    <div style="text-align: center">
+
+        <h2 v-for="(name,index)  in fullNames" :key="name.firstName">{{index}}.{{name.firstName}} {{name.lastName}}</h2>
+        <hr>
+        <h2 v-for="(value,key,index) in myDatas" :key="value">{{index}} {{key}}: {{value}}</h2>
+    </div>
+
+</div>
+
+<script>
+    let app = new Vue({
+        el: `#app`,
+        data: {
+            names:[ "Bappy", "Ashik", "Shamim" ],
+            fullNames : [
+                {firstName: "Tanvir Hossen", lastName: "Bappy"},
+                {firstName: "Ashikur Rahman", lastName: "Ashik"},
+                {firstName: "Shamim Ahamed", lastName: "Sujon"},
+            ],
+            actors : [
+                {
+                    name: 'Robert Downey Jr',
+                    movies : ['Iron Man', 'Sherlock Holmes']
+                },
+                {
+                    name: 'Chris HemsWorth',
+                    movies : ['Thor', 'The Huntsman: Winters War']
+                },
+            ],
+            myDatas :
+                {
+                    Name: 'Tanvir Hossen Bappy',
+                    Profession: 'Software Engineer Web',
+                    Company: 'IBSS - Integrated Business Systems & Solutions PVT. Ltd.',
+                }
+        },
+        methods:{
+            hello(){
+
+            }
+
+        }
+    });
+</script>
+</body>
+</html>

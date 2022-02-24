@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+    .movie{
+        color: orange;
+    }
+    .thriller{
+        text-decoration: line-through;
+    }
+</style>
+<body>
+<div id="app">
+   <div>
+       <h1>Welcome to
+       <a v-bind:href="url" target="_blank">Red Rum</a>
+       </h1>
+       <input :value="actorName" type="text">
+
+       <h3 :class="Type">Webfilm</h3>
+   </div>
+
+</div>
+
+<script>
+    let app = new Vue({
+        el: `#app`,
+        data: {
+            name:  `Tanvir Hossen Bappy`,
+            url : `https://www.youtube.com/watch?v=Tj4lwcrIFeU`,
+            actorName: `Afran Nisho`,
+            Type : ['movie','thriller']
+        },
+    });
+</script>
+</body>
+</html>
