@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Event!</title>
+</head>
+<body>
+
+<div id="app">
+<div class="text-center">
+  <p >{{name}}</p>
+  <button v-on:click="nameChange()" type="button" class="btn btn-outline-success">Click Me</button>
+</div>
+  <br/><br/>
+
+
+  <div class="box text-center" v-on:mousemove="getCord">
+          Hover me
+  </div>
+<div class="text-center">
+  <p>X : {{x}}</p>
+  <p>Y: {{y}}</p>
+</div>
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script>
+  new Vue({
+    el: `#app`,
+    data: {
+      name:"Tanvir Hossen Bappy",
+      x :0,
+      y :0,
+
+    },
+    methods: {
+      nameChange() {
+       return this.name = "Welcome"
+      },
+      getCord(event){
+        this.x = event.clientX
+        this.y = event.clientY
+      }
+    }
+  });
+</script>
+
+</body>
+<style>
+  .box{
+    background: purple;
+    height: 400px;
+    width: 400px;
+    color: white;
+  }
+</style>
+</html>

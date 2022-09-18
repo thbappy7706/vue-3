@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p class="text-center" v-text="title"></p>
+
+   <img v-bind:src="image" v-bind:alt="alt">
+    <a class="btn btn-primary" target="_blank" v-bind:href="link">
+        Click Here
+    </a>
+    <hr>
+    <p class="text-center" v-html="html"></p>
+
+    <hr/>
+    <p v-if="getResult()">
+        Hello Tanvir Hossen Bappy
+    </p>
+    <p v-if="age>=26">
+        Age Cleared
+    </p>
+
+    <p v-else>
+        Sorry Try again
+    </p>
+
+    <hr>
+
+</div>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
