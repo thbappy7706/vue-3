@@ -25,6 +25,9 @@ template:
                 <button class="button" @click="removeFromCart">Remove Item</button>
             </div>
         </div>
+        
+    <review-list v-if="reviews.length" :reviews="reviews"></review-list>
+    <review-form @review-submitted="addReview"></review-form>
     </div>`,
 
     data() {
@@ -41,7 +44,8 @@ template:
                 {id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity:0},
                 // {id: 2236, color: 'blue', image: './assets/images/socks_blue.jpg', quantity:1},
             ],
-            cart: 0,
+            reviews: [],
+
         }
     },
     methods: {
@@ -55,6 +59,9 @@ template:
 
         removeFromCart() {
             this.$emit('remove-from-cart', this.variants[this.selectedVarient].id)
+        },
+        addReview(review) {
+            this.reviews.push(review)
         }
     },
 
